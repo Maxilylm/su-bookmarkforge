@@ -1,36 +1,32 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# BookmarkForge
 
-## Getting Started
+> Import a browser bookmark export, clean it up, and get it back out in the format you need.
 
-First, run the development server:
+**[Live demo](https://su-bookmarkforge.vercel.app)**
+
+Browser bookmark exports are a flat wall of HTML with years of duplicates and dead weight in them, and no browser gives you a decent way to audit that file. BookmarkForge parses the Netscape-format HTML that Chrome and Firefox produce (or a plain pasted list of URLs), rebuilds the folder tree, and shows every bookmark in a searchable, filterable list. It flags duplicate URLs by normalized comparison so you can strip them in one click, lets you attach your own tags, and exports the result as HTML, JSON, or Markdown. Everything runs in the browser — the file is parsed with `DOMParser` and never uploaded.
+
+## Features
+
+- Import bookmarks by file picker or drag-and-drop from a Chrome/Firefox HTML export, preserving the original folder structure
+- Paste a raw list of URLs as an alternative import path
+- Duplicate detection across the whole set, with a one-click "remove duplicates" action
+- Filter by folder, by tag, by free-text search, or by duplicates-only
+- Add and remove custom tags on individual bookmarks
+- Export to Netscape HTML, JSON, or Markdown — exporting the current filtered view when a filter is active
+
+## Stack
+
+- Next.js 16 (App Router) with React 19, TypeScript, and Tailwind CSS v4
+- No backend, no database, no external APIs — all parsing and export happens client-side
+
+## Running locally
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Part of a series of 90 small web apps. [Browse them all](https://su-slopmachine.vercel.app).
