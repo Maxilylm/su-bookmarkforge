@@ -2,7 +2,7 @@
 
 > Import a browser bookmark export, clean it up, and get it back out in the format you need.
 
-**[Live demo](https://su-bookmarkforge.vercel.app)**
+**[Live demo](https://bookmarkforge-mlx.vercel.app)**
 
 Browser bookmark exports are a flat wall of HTML with years of duplicates and dead weight in them, and no browser gives you a decent way to audit that file. BookmarkForge parses the Netscape-format HTML that Chrome and Firefox produce (or a plain pasted list of URLs), rebuilds the folder tree, and shows every bookmark in a searchable, filterable list. It flags duplicate URLs by normalized comparison so you can strip them in one click, lets you attach your own tags, and exports the result as HTML, JSON, or Markdown. Everything runs in the browser — the file is parsed with `DOMParser` and never uploaded.
 
@@ -29,4 +29,4 @@ npm run dev
 
 ---
 
-Part of a series of 90 small web apps. [Browse them all](https://su-slopmachine.vercel.app).
+Part of a series of 90 small web apps. [Browse them all](https://lorenzoylosada.vercel.app).
